@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ServiceConnect - Encontre Profissionais Locais Confiáveis</title>
+  <link href="https://cdn.tailwindcss.com" rel="stylesheet" />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</head>
+<body class="bg-white text-black font-sans min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <nav class="bg-white border-b border-gray-200 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <a href="#" class="flex items-center text-3xl font-extrabold tracking-tight">ServiceConnect</a>
+        <div class="hidden sm:flex space-x-8 items-center">
+          <a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Início</a>
+          <a href="listings.html" class="text-gray-600 hover:text-gray-900 font-medium">Profissionais</a>
+          <a href="login.html" class="text-gray-600 hover:text-gray-900 font-medium">Entrar</a>
+        </div>
+        <div class="sm:hidden">
+          <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+            <span class="sr-only">Abrir menu principal</span>
+            <svg class="block h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+            <svg class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="sm:hidden hidden" id="mobile-menu">
+      <a href="#" class="block px-4 py-2 text-gray-900 font-semibold hover:bg-gray-100">Início</a>
+      <a href="listings.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-900 hover:text-white">Profissionais</a>
+      <a href="login.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-900 hover:text-white">Entrar</a>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section class="relative bg-black">
+    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Banner" class="w-full h-[600px] object-cover opacity-70" />
+    <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+      <h1 class="text-white text-6xl font-extrabold mb-6 drop-shadow-lg max-w-4xl">Encontre Profissionais Confiáveis para Todos os Seus Serviços</h1>
+      <p class="text-white text-xl max-w-3xl mb-10 drop-shadow-md">Conectamos você com especialistas locais qualificados para garantir qualidade e segurança.</p>
+      <form class="flex flex-col md:flex-row gap-4 w-full max-w-4xl" action="listings.html" method="GET">
+        <input
+          type="text"
+          name="service"
+          placeholder="Qual serviço você precisa?"
+          class="flex-grow rounded-md p-5 text-black font-semibold focus:outline-none focus:ring-4 focus:ring-yellow-400"
+          required
+        />
+        <input
+          type="text"
+          name="location"
+          placeholder="Sua localização"
+          class="w-full md:w-72 rounded-md p-5 text-black font-semibold focus:outline-none focus:ring-4 focus:ring-yellow-400"
+          required
+        />
+        <button
+          type="submit"
+          class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-md px-10 py-5 transition"
+        >
+          Buscar
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Popular Categories -->
+  <section class="max-w-7xl mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-6 text-center">Categorias Populares</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <a href="listings.html?service=Pedreiros" class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center hover:shadow-xl transition">
+        <img src="https://images.pexels.com/photos/450271/pexels-photo-450271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=150" alt="Pedreiros" class="rounded-full w-24 h-24 mb-4 object-cover" />
+        <span class="text-lg font-semibold">Pedreiros</span>
+      </a>
+      <a href="listings.html?service=Encanadores" class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center hover:shadow-xl transition">
+        <img src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=150" alt="Encanadores" class="rounded-full w-24 h-24 mb-4 object-cover" />
+        <span class="text-lg font-semibold">Encanadores</span>
+      </a>
+      <a href="listings.html?service=Eletricistas" class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center hover:shadow-xl transition">
+        <img src="https://images.pexels.com/photos/209235/pexels-photo-209235.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=150" alt="Eletricistas" class="rounded-full w-24 h-24 mb-4 object-cover" />
+        <span class="text-lg font-semibold">Eletricistas</span>
+      </a>
+      <a href="listings.html?service=Carpinteiros" class="bg-white shadow-md rounded-lg p-6 flex flex-col items-center hover:shadow-xl transition">
+        <img src="https://images.pexels.com/photos/450271/pexels-photo-450271.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=150" alt="Carpinteiros" class="rounded-full w-24 h-24 mb-4 object-cover" />
+        <span class="text-lg font-semibold">Carpinteiros</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-extrabold mb-6">Por que escolher o ServiceConnect?</h2>
+      <p class="max-w-3xl mx-auto text-lg mb-8">Conectamos você com profissionais qualificados e confiáveis para garantir que seu serviço seja feito com excelência e segurança.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=150" alt="Qualidade" class="mx-auto rounded-full mb-4 object-cover w-24 h-24" />
+          <h3 class="text-xl font-semibold mb-2">Qualidade Garantida</h3>
+          <p>Profissionais avaliados e selecionados para garantir o melhor serviço.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=150" alt="Confiabilidade" class="mx-auto rounded-full mb-4 object-cover w-24 h-24" />
+          <h3 class="text-xl font-semibold mb-2">Confiabilidade</h3>
+          <p>Conectamos você com profissionais locais confiáveis e experientes.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow-md">
+          <img src="https://images.pexels.com/photos/3184463/pexels-photo-3184463.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=150&w=150" alt="Suporte" class="mx-auto rounded-full mb-4 object-cover w-24 h-24" />
+          <h3 class="text-xl font-semibold mb-2">Suporte ao Cliente</h3>
+          <p>Estamos aqui para ajudar você em todas as etapas do processo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white border-t border-gray-200 p-6 text-center text-sm text-gray-500">
+    &copy; 2024 ServiceConnect. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuButton.querySelectorAll('svg').forEach(svg => svg.classList.toggle('hidden'));
+    });
+  </script>
+</body>
+</html>
